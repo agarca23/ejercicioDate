@@ -1,4 +1,4 @@
-public class Date(/*int day, int month, int year*/) throw Excepcion{
+public class Date() throws Excepcion{
 
 	private int day;
 	private int month;
@@ -8,6 +8,11 @@ public class Date(/*int day, int month, int year*/) throw Excepcion{
 	this.month=1;
 	this.day=1;
 	
+	public Date(int day, int month, int year){
+		this.year=year;
+		this.month=month;
+		this.day=day;
+
 	String mensaje= new StringBuffer();
 
 	if (year<0){
@@ -37,6 +42,24 @@ public class Date(/*int day, int month, int year*/) throw Excepcion{
 	
 	boolean isSameYear(Date otherDate){
 		if (this.year==otherDate.getYear()){
+			return true;
+		}else{
+			return false;
+		}
+	
+	}
+
+	boolean isSameMonth(Date otherDate){
+		if (this.month==otherDate.getMonth()){
+			return true;
+		}else{
+			return false;
+		}
+	
+	}
+
+	boolean isSameDay(Date otherDate){
+		if (this.day==otherDate.getDay()){
 			return true;
 		}else{
 			return false;
